@@ -67,6 +67,7 @@ const loadPage = (page, query, bookId) => async (dispatch, getState) => {
         page = '404';
       }
       break;
+
     case 'favorites':
       module = await import('../components/book-favorites.js');
       // Fetch favorites
@@ -74,7 +75,15 @@ const loadPage = (page, query, bookId) => async (dispatch, getState) => {
       // Update subtitle
       dispatch(updateSubTitle('Favorites'));
       break;
-    case 'about':
+      case 'createPatient':
+          module = await import('../components/create-patient.js');
+          // Fetch favorites
+          //dispatch(module.fetchCreatePatient());
+          // Update subtitle
+          dispatch(updateSubTitle('Create Patient'));
+          break;
+
+      case 'about':
       await import('../components/book-about.js');
       break;
     default:

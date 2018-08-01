@@ -13,7 +13,7 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 import { PageViewElement } from './page-view-element.js';
 import '@lh-toolkit/fhir-birth-date/fhir-birth-date.js'
 
-class Book404 extends PageViewElement {
+class CreatePatient extends PageViewElement {
   _render() {
     return html`
       <style>
@@ -37,4 +37,4 @@ class Book404 extends PageViewElement {
   }
 }
 
-window.customElements.define('book-404', Book404);
+window.customElements.define('create-patient', CreatePatient);
